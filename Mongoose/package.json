@@ -1,0 +1,16 @@
+{
+  "name": "mongoos",
+  "version": "1.0.0",
+  "description": "learning of the mongoos in mongoDB.",
+  "license": "ISC",
+  "author": "nitish",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mongoose": "^9.4.1",
+    "nodemon": "^3.1.14"
+  }
+}
