@@ -1,0 +1,147 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div class="Alldropdown">
+            <div class="dropdown">
+                <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    choose place
+                </button>
+                <ul class="dropdown-menu">
+                    <div class="filter">
+                        <div><i class="fa-solid fa-fire"></i></div>
+                        <p>Tending</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-bed"></i></div>
+                        <p>Rooms</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-city"></i></div>
+                        <p>Iconic city</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-mountain-city"></i></div>
+                        <p>Mountain</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-brands fa-alipay"></i></div>
+                        <p>Castles</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-person-swimming"></i></div>
+                        <p>Amazing Pool</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-tent"></i></div>
+                        <p>Camping</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-seedling"></i></div>
+                        <p>Farming</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-hexagon-nodes"></i></div>
+                        <p>Artic</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-landmark-dome"></i></div>
+                        <p>Domes</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-brands fa-houzz"></i></div>
+                        <p>Design</p>
+                    </div>
+                    <div class="filter">
+                        <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                        <p>Beach</p>
+                </ul>
+
+            </div>
+            <div class="toggle-btn ">
+                <div class="form-check form-switch form-check-reverse">
+                    <input class="form-check-input" type="checkbox" id="switchCheckReverse">
+                    <label class="form-check-label" for="switchCheckReverse">Display total tax</label>
+                </div>
+            </div>
+        </div>
+        <!-- for laptop screen -->
+        <div id="filters">
+            <div class="filter">
+                <div><i class="fa-solid fa-fire"></i></div>
+                <p>Tending</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-bed"></i></div>
+                <p>Rooms</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-city"></i></div>
+                <p>Iconic city</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-mountain-city"></i></div>
+                <p>Mountain</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-alipay"></i></div>
+                <p>Castles</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-person-swimming"></i></div>
+                <p>Amazing Pool</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-tent"></i></div>
+                <p>Camping</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-seedling"></i></div>
+                <p>Farming</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-hexagon-nodes"></i></div>
+                <p>Artic</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-landmark-dome"></i></div>
+                <p>Domes</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-brands fa-houzz"></i></div>
+                <p>Design</p>
+            </div>
+            <div class="filter">
+                <div><i class="fa-solid fa-umbrella-beach"></i></div>
+                <p>Beach</p>
+            </div>
+            <div class="toggle-btn ">
+                <div class="form-check form-switch form-check-reverse">
+                    <input class="form-check-input" type="checkbox"  id="checkNativeSwitch" >
+                    <label class="form-check-label" for="checkNativeSwitch">Display total tax</label>
+                </div>
+            </div>
+        </div>
+        <div class="card-container mt-1">
+            <% for(let listing of allListing) { %>
+                <a href="/listing/<%=listing._id%>" class="listing-a">
+                    <div class="card">
+                        <img src="<%=listing.image.url%>" class="card-img-top" alt="listing_image">
+                        <div class="card-img-overlay"></div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <p>
+                                    <%=listing.title%> <br> &#8377;<%=listing.price ?
+                                            listing.price.toLocaleString("en-IN") : "" %>
+                                            /night<i class="tex-info">&nbsp; +18% GST</i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <% } %>
+        </div>
+    </body>
+
+    <script>
+
+    </script>

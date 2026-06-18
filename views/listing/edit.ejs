@@ -1,0 +1,80 @@
+<% layout("/layouts/boilerplate") %>
+
+    <body>
+        <div>
+            <p style="color: brown; font-size: 2rem;">Edit Your Data Id is <b><%=EditList._id%></b> </p>
+            <div>
+                <form method="post" action="/listing/<%=EditList._id%>/?_method=PATCH" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for=" title" class="form-label">Title: </label>
+                        <input 
+                           type="text" 
+                           name="listing[title]" 
+                           id="title" 
+                           class="form-control"
+                           value="<%=EditList.title%>" 
+                           required
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description: </label>
+                        <input 
+                           type="text" 
+                           name="listing[description]" 
+                           id="description" 
+                           class="form-control"
+                           value="<%=EditList.description%>" 
+                           required
+                        >
+                    </div>
+                    <div class="mb-3">
+                        <h3>Original Image:</h3>
+                        <img style="height: 200px; width: 250px;" src=<%=originalImage%> alt="org" id="org"><br><br>
+                        <label for="image" class="form-label">Upload Image: </label>
+                        <input 
+                           type="file" 
+                           name="listing[image]" 
+                           id="image" 
+                           class="form-control"
+                        >
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-md-4">
+                            <label for="price" class="form-label">Price: </label>
+                            <input 
+                               type="number" 
+                               name="listing[price]" 
+                               id="price" 
+                               class="form-control"
+                               value="<%=EditList.price%>" 
+                               required
+                            >
+                        </div>
+                        <div class="mb-3 col-md-8">
+                            <label for="location" class="form-label">Location: </label>
+                            <input 
+                                type="text" 
+                                name="listing[location]" 
+                                id="location" 
+                                class="form-control"
+                                value="<%=EditList.location%>" 
+                                required
+                            >
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country: </label>
+                        <input 
+                           type="text" 
+                           name="listing[country]"  
+                           id="country" 
+                           class="form-control"
+                           value="<%=EditList.country%>"
+                           required
+                        >
+                    </div>
+                    <button class="btnEdit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>

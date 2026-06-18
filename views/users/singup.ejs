@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate") %>
+    <div class="row mt-3">
+        <div class="col-4 offset-md-3 mobile-width">
+            <h3 class="singupText">Sing up</h3>
+            <form action="singup" method="POST">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">@</span>
+                    <div class="form-floating">
+                        <input type="text" name="username" class="form-control" id="username" placeholder="Username"
+                            required>
+                        <label for="username">Username</label>
+                    </div>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+                    <label for="email">Email address</label>
+                </div>
+                <div class="input-group form-floating">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password">
+                    <label for="password">Password</label>
+                    <button class="btn btn-outline-secondary" type="button" id="toggleBtn">
+                        <i class="fa fa-eye" id="eyeIcon"></i>
+                    </button>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn singupBtn mt-3">Sign Up</button>
+                </div>
+                <div class="haveAccount">
+                    <p>Already have an account?&nbsp;&nbsp;<a href="/user/login">Log In</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
