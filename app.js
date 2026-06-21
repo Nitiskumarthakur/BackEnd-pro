@@ -20,6 +20,9 @@ const listingRouter = require("./routers/listing.js");
 const reviewRouter = require("./routers/reviews.js");
 const userRouter = require("./routers/user.js");
 
+//For access the listing page.
+const listingController = require("./controllers/listing.js");
+
 //let MONGOOSE_URL = 'mongodb://127.0.0.1:27017/wanderlist';
 let dbUrl=process.env.MongoAtasdb
 
@@ -84,6 +87,9 @@ app.post("/search", (req,res,next)=>{
     req.session.searchName = req.body.searchName;
     res.redirect("/listing");
 })
+
+//render the main page. (Listing).
+app.get("/", (listingController.index));
 
 //Router Defined!
 app.use("/listing", listingRouter);
