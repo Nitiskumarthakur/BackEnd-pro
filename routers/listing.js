@@ -10,7 +10,7 @@ const {storage, cloudinary} = require('../cloudConfig.js');
 const upload = multer({storage});
 
 //Index route
-router.get("/", (listingController.index));
+//router.get("/", (listingController.index));
 
 // for newpost get route
 router.get("/newList",isLoggedIN,(listingController.newListForm));
