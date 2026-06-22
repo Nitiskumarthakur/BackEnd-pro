@@ -2,7 +2,7 @@
 
     <body>
         <div>
-            <p style="color: brown; font-size: 2rem;">Edit Your Data Id is <b><%=EditList._id%></b> </p>
+            <p style="color: brown; font-size: 1.5rem;">Edit Your Data Id is <b><%=EditList._id%></b> </p>
             <div>
                 <form method="post" action="/listing/<%=EditList._id%>/?_method=PATCH" class="needs-validation" novalidate enctype="multipart/form-data">
                     <div class="mb-3">
@@ -73,7 +73,7 @@
                            required
                         >
                     </div>
-                    <button class="btnEdit">Submit</button>
+                    <button class="btnEdit offset-3 offset-md-5">Submit</button>
                 </form>
             </div>
         </div>
