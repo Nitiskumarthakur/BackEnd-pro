@@ -265,6 +265,8 @@ footer{
 
 /* Add new List*/
 .btnNewList{
+    width: 10rem;
+    height: 2.5rem;
     color:white ;
     background-color: #fe424d;
     border: none;
@@ -272,6 +274,8 @@ footer{
 }
 /* Edit page */
 .btnEdit{
+    width: 10rem;
+    height: 2.5rem;
     color:white ;
     background-color: #fe424d;
     border: none;
