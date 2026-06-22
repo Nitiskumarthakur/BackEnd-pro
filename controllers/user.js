@@ -20,7 +20,7 @@ module.exports.singupPost = async (req,res,next)=>{
               return next(err); 
             }
             req.flash("success", "Register successfully.")
-            return res.redirect('/listing');
+            return res.redirect('/');
         });      
     }catch(e){
         req.flash("error", `${e.message}, try again.`);
@@ -36,7 +36,7 @@ module.exports.loginPost =
     
     async(req,res)=>{
     req.flash("success","welcome Back to wanderlist page!");
-    let rediretURL = res.locals.redirectUrl || "/listing";
+    let rediretURL = res.locals.redirectUrl || "/";
     res.redirect(rediretURL);
 };
 
@@ -46,6 +46,6 @@ module.exports.logOut = (req,res,next)=>{
             next(err);
         }
         req.flash("success", "you are logged out!");
-        res.redirect("/listing");
+        res.redirect("/");
     })
 };
