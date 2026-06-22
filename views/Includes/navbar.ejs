@@ -1,18 +1,25 @@
 
 <nav class="navbar navbar-expand-md bg-body-tertiary sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/listing"><i class="fa-brands fa-airbnb"></i></a>
+    <a class="navbar-brand" href="/"><i class="fa-brands fa-airbnb"></i></a>
+     <div class="MobileSearchBtn">
+        <form class="d-flex" role="search" method="POST" action="/search">
+          <input class="form-control me-2 search-inp" type="search" placeholder="Search Destination" name="searchName"/>
+        </form>
+      </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    
+    <!-- ----------toggleBtn functionality---------- -->
     <div class="collapse navbar-collapse" id="navbarNav">
       <div class="navbar-nav">
         <a class="nav-link" href="/">Explore</a>
       </div>
-      <div class="ms-auto">
+      <div class="ms-auto DistopSearchBtn">
         <form class="d-flex" role="search" method="POST" action="/search">
-          <input class="form-control me-2 search-inp kum" type="search" placeholder="Search Destination" name="searchName"/>
+          <input class="form-control me-2 search-Btn" type="search" placeholder="Search Destination" name="searchName"/>
           <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
         </form>
       </div>
