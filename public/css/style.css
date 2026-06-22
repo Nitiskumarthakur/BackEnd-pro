@@ -34,9 +34,15 @@ body{
     display: inline;
     margin-right: 0.5rem;
 }
-.search-inp{
+.search-Btn{
     border-radius: 25px;
     padding: 0.5rem 3rem 0.5rem 3rem;
+}
+.DistopSearchBtn{
+    display: inline;
+}
+.MobileSearchBtn{
+    display: none;
 }
 
 /* blow the Navbar */
@@ -233,8 +239,19 @@ footer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    /* for map */
-    
+    /* for mobile seach btn */
+    .DistopSearchBtn{
+        display: none;
+    }
+    .MobileSearchBtn{
+        display: inline;
+        width: 200px;
+        margin-right: 1rem;
+    }
+    .search-inp{
+        border-radius: 25px;
+        padding: 0.5rem 1rem 0.5rem 1.5rem;
+    }
     
 }
 .card-img-overlay:hover{
