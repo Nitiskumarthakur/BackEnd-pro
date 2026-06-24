@@ -39,7 +39,7 @@ module.exports.creatList = async (req, res,next)=>{
     newList.image = {url, filename};
     await newList.save();
     req.flash("success", "Congratulations, successfuly creat New List!");
-    res.redirect("/listing");
+    res.redirect("/");
 };
 
 module.exports.editListForm = async(req,res)=>{
@@ -61,12 +61,12 @@ module.exports.editList = async (req, res)=>{
     }
     await updatedlist.save();
     req.flash("success", "SuccessFul Updated Data.");
-    res.redirect(`/listing/${id}`);
+    res.redirect(`/${id}`);
 };
 
 module.exports.deleteList = async (req, res)=>{
     let {id} = req.params;
     await Listing.findByIdAndDelete(id);
     req.flash("success", "SuccessFul Deleted!");
-    res.redirect("/listing");
+    res.redirect("/");
 };
