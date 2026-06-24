@@ -85,7 +85,7 @@ app.use((req,res,next)=>{
 //This code for searching functionality.
 app.post("/search", (req,res,next)=>{
     req.session.searchName = req.body.searchName;
-    res.redirect("/listing");
+    res.redirect("/");
 })
 
 //render the main page. (Listing).
